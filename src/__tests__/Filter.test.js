@@ -9,7 +9,8 @@ test("displays the <select> element", () => {
 
 test("calls the onCategoryChange callback prop when the <select> is changed", () => {
   const onCategoryChange = jest.fn();
-  render(<Filter onCategoryChange={onCategoryChange} />);
+  
+  render(<Filter onCategoryChange={onCategoryChange}/>);
 
   fireEvent.change(screen.queryByRole("combobox"), {
     target: { value: "Dairy" },
